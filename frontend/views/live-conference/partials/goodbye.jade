@@ -1,0 +1,13 @@
+section.goodbye
+  .modal-dialog.modal-md
+    .modal-content.modal-center.modal-hublin
+      .modal-header
+        h4!=__j("Merci d'avoir utilisé  %s", 'img.logo2(src="images/logo.png")')
+      .modal-body.text-center
+        goodbye-page-reminders
+        .modal-container  
+          .row  
+            .col.m6
+              button.btn.brown(type='button', ng-click='reopen()') #{__('Réouvrir la salle ')}
+            .col.m6
+              conference-create-form

@@ -1,0 +1,146 @@
+{
+  "app": {
+    "name": "Hubl.in"
+  },
+  "webserver": {
+    "enabled": true,
+    "debugPort": 8081,
+
+    "ip": "0.0.0.0",
+    "ipv6": "::",
+    "port": 8080,
+
+    "ssl_ip": "0.0.0.0",
+    "ssl_ipv6": "::",
+    "ssl_port": 8443,
+    "ssl_key": "config/ssl.key",
+    "ssl_cert": "config/ssl.crt",
+    "ssl_ca": [],
+
+    "virtualhosts": [],
+    "startupBufferTimeout": 5000,
+
+    "loggers": [
+      {
+        "name": "File",
+        "enabled": false,
+        "options": {
+          "filename": "./log/webserver.log",
+          "level": "info",
+          "handleExceptions": true,
+          "json": false,
+          "prettyPrint": true,
+          "colorize": false
+        }
+      },
+      {
+        "name": "Console",
+        "enabled": true,
+        "options": {
+          "enabled": true,
+          "level": "info",
+          "handleExceptions": true,
+          "json": false,
+          "prettyPrint": true,
+          "colorize": true
+        }
+      }
+    ]
+  },
+  "wsserver": {
+    "enabled": true,
+    "port": 8080
+  },
+  "webrtc": {
+    "enabled": true,
+    "level": "debug",
+    "roomNameRegExp": "^.{1,64}$",
+    "usernameRegExp": "^(.){1,200}$",
+    "appIceServers": [
+        {"url": "stun:stun3.l.google.com:19302"},
+        {"url": "stun:stun.ekiga.net"},
+        {"url": "stun:stun4.l.google.com:19302"},
+        {"url": "stun:stunserver.org"}
+    ]
+  },
+  "analytics": {
+    "piwik": {
+      "enabled": false,
+      "https": false,
+      "server": "",
+      "uri": ""
+    },
+    "google": {
+      "enabled": false,
+      "ua": ""
+    }
+  },
+  "loggers" : [
+    {
+      "name": "File",
+      "enabled": true,
+      "options": {
+        "filename": "./log/application.log",
+        "level": "info",
+        "handleExceptions": true,
+        "json": false,
+        "prettyPrint": true,
+        "colorize": false
+      }
+    },
+    {
+      "name": "DailyRotateFile",
+      "enabled": false,
+      "options": {
+        "filename": "./log/application.log",
+        "level": "info",
+        "handleExceptions": true,
+        "json": false,
+        "prettyPrint": true,
+        "colorize": false,
+        "datePattern": ".yyyy-MM-dd"
+      }
+    },
+    {
+      "name": "Console",
+      "enabled": true,
+      "options": {
+        "enabled": true,
+        "level": "info",
+        "handleExceptions": true,
+        "json": false,
+        "prettyPrint": true,
+        "colorize": true
+      }
+    },
+    {
+      "name": "Mail",
+      "enabled": "false",
+      "module": "winston-mail",
+      "options": {
+        "to": "fail@hubl.in",
+        "host": "smtp@hubl.in",
+        "port": 587,
+        "username": "admin",
+        "password": "secret",
+        "ssl": {
+          "key": "",
+          "ca": "",
+          "cert": ""
+        },
+        "level": "error",
+        "silent": true
+      }
+    }
+  ],
+  "emailInvitation": {
+    "templatesDir": "./templates/email"
+  },
+  "modules": [
+    "linagora.io.meetings",
+    "linagora.esn.chat",
+    "linagora.esn.yjs",
+    "om-email-invitation",
+    "hublin-easyrtc-connector"
+  ]
+}

@@ -1,0 +1,84 @@
+.meetings-landing-page(ng-controller='meetingsLandingPageController')
+  #index-banner.parallax-container
+    .section.no-pad-bot
+      .container
+          img.logo(src="/images/logo.png")
+          .center.title
+            h5.header.col.s12.light
+              strong
+                | Un service de chat-vidéo facile et gratuit ,créez une salle et invitez vos conférenciers
+        .supported.form-conference
+          conference-create-form.conference-box
+        
+    .parallax.responsive-img.first
+      img(src='/images/woman-laptop.jpg', alt='image femme avec pc')
+  .container
+    .section
+      .row
+        .col.s12.m4
+          .icon-block
+            h2.center.brown-text
+              i.material-icons settings
+            h5.center Aucune installation requise
+            p.light.center
+              | Pour avoir une video-conference en ligne , pas besoin de se créer de compte ou de telecharger un logiciel . Avec 
+              strong.teal-text.text-lighten-2  ALLO-FINEK 
+              | , il suffit de créer une salle de conférence en un seul click , puis d'envoyer l'URL donnée à vos conférenciers.
+        .col.s12.m4
+          .icon-block
+            h2.center.brown-text
+              i.material-icons group
+            h5.center Vos Reunions en ligne 
+            p.light.center
+              | Avec ALLO-FINEK organisez une réunion  directement depuis votre bureau et économisez ainsi du temps et de l´argent . Prochainement ,
+              strong.teal-text.text-lighten-2 ALLO-FINEK 
+              |   ajoutera des fonctionnalités pour rendre vos réunions plus intéressantes ,tel que le partage d'ecran et l'envoi de fichier .
+        .col.s12.m4
+          .icon-block
+            h2.center.brown-text
+              i.material-icons thumb_up
+            h5.center  Fiable et Efficace 
+            p.light.center
+              | En utilisant la technologie WebRTC , 
+              strong.teal-text.text-lighten-2  ALLO-FINEK 
+              |  vous offre une communication P2P temps réel 100% fiable . En outre , notre équipe veille à la satisfaction de l'utilisateur et du bon déroulement des vidéo-conférences .
+  .parallax-container.valign-wrapper
+    .section.no-pad-bot
+      .container
+        .row.center
+          h5.header.col.s12.light
+            | Solution Marocaine gratuite  numéro 1 pour la vidéo-conférence via navigateur
+    .parallax.first
+      img.responsive-img(src='/images/man-phone.jpg', alt='Image Homme avec telephone et pc')
+  .container
+    .section
+      .row
+        .col.s12.center
+          h3
+            i.mdi-content-send.brown-text
+          h4  Vos suggestions et recommendations
+        form.col.s12
+          .row
+            .input-field.col.s6
+              i.material-icons.prefix account_circle
+              input#name(placeholder='Votre Prenom ..', type='text', required='')
+              label(for='name') Prenom
+            .input-field.col.s6
+              i.material-icons.prefix account_circle
+              label(for='last_name') Nom
+              input#last_name(type='text', placeholder='Votre Nom..', required='')
+          .row
+            .input-field.col.s12
+              i.material-icons.prefix email_circle
+              input#email(placeholder='example@example.com', type='email', required='')
+              label(for='email') Email
+          .row
+            .input-field.col.s12
+              i.material-icons.prefix mode_edit
+              textarea#address.materialize-textarea
+              label(for='address') Message
+  footer.page-footer.teal
+    .footer-copyright  
+      .container
+        | Copyright © 2015-2016 
+        a.brown-text.text-lighten-3(href='http://alloFinek.ma') AlloFinek

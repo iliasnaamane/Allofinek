@@ -1,0 +1,207 @@
+@import "../components/angular-liveconference/src/css/conference.less";
+@import "./variables.less";
+
+@yellow: #eecb25;
+@light-grey: #f8f8f8;
+
+@defaultImageSizeMedium: 48px;
+@overActionColor: @yellow;
+@attendeeBarColor: @light-grey;
+
+html body.hublin-live-conference-app{
+  background: @conference-background;
+}
+
+html {
+  .hublin-live-conference-app #wrap {
+    display: none;
+  }
+  .hublin-live-conference-app .unsupported {
+    display: block;
+  }
+}
+
+html.websockets.getusermedia.peerconnection.datachannel {
+  .hublin-live-conference-app #wrap {
+    display: block;
+  }
+  .hublin-live-conference-app .unsupported {
+    display: none;
+  }
+}
+
+.hublin-live-conference-app {
+  height: auto !important;
+  width:100%;
+  margin-bottom: 0;
+}
+
+.hublin-live-conference-container {
+  .container-fluid {
+    padding: 0;
+  }
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.hublin-browser-authorization-dialog {
+  .modal-content {
+    background: none;
+    color: white;
+    .text-muted, .close-modal {
+      color: white;
+    }
+    padding: 0;
+    .top {
+      position: absolute;
+      top: 0;
+    }
+    .bottom {
+      position: absolute;
+      bottom: 0;
+    }
+  }
+}
+
+@media (min-width: @screen-sm-min) {
+
+  .hublin-browser-authorization-dialog {
+    .modal-content {
+      background: none;
+      color: white;
+      .text-muted, .close-modal {
+        color: white;
+      }
+      .top {
+        position: inherit;
+      }
+      .bottom {
+        position: inherit;
+      }
+    }
+  }
+
+  .vertical-center {
+    min-height: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+  }
+
+}
+
+.information-box {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+
+  font-size: 15px;
+
+  max-width: 600px;
+  margin: auto;
+
+  .left {
+    margin-right: 10px;
+  }
+  .middle {
+    text-align: left;
+
+    ul li {
+      a {
+        cursor: pointer;
+      }
+    }
+
+    .before-button {
+      margin-right: 10px;
+    }
+    .after-button {
+      margin-left: 10px;
+    }
+
+    flex: 1 1 0;
+  }
+  .right {
+    margin-left: 10px;
+  }
+
+  .left, .right {
+    width: 4em;
+    flex: 0 1 60px;
+  }
+
+  .left, .right, .middle {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+.information {
+  color: @information-color;
+}
+.mini-video {
+  z-index: 6;
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
+}
+.stream-video {
+  display: none;
+}
+.chat-window .flexbox-item.header {
+    background-color: #26a69a !important ;
+}
+
+.logo {
+  width:150px; /* you can use % */
+  height: auto;
+  margin-left: 50px;
+}
+
+.logo1 {
+  width:100px;
+  height:auto;
+}
+.logo2 {
+  width:80px;
+  height:auto;
+  margin-top: -30px;
+  margin-left: 20px;
+}
+.logo3 {
+  width:100px;
+  height:auto;
+  margin-top: -30px;
+  margin-left: 20px;
+}
+.create-room {
+  margin-left:250px;
+}
+
+.logo-chat {
+  width: 80px;
+  height: auto;
+}
+
+.conference-user-control-bar {
+  top:0px !important ;
+}
+
+.image-gratuit {
+  display: none;
+}
+
+#toast-container {
+  top: auto !important;
+  right: auto !important;
+  bottom: 20%;
+  left:40%;  
+}
+
+
+.modal-container {
+  margin-top:20px; 
+}

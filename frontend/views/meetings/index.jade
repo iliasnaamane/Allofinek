@@ -1,0 +1,61 @@
+doctype html
+html
+  head
+
+    include ../commons/meta.jade
+    include ../commons/facebook-markup
+    include ../commons/utils
+    include ../commons/twitter-markup
+
+    title AlloFinek.ma,video-conférence par excellence !
+
+      //- <!--Materialize Framework CSS ! -->  
+    link(rel="stylesheet", href="/components/Materialize/dist/css/materialize.css")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+       
+    //- <!--Own css  ! -->  
+    
+    //- homepage Css 
+    link(rel="stylesheet", href="/css/hublin.css")
+
+    script(src='/components/jquery/dist/jquery.min.js')
+
+    //- <!--Materialize Framework JS ! -->  
+    script(src='/components/Materialize/dist/js/materialize.min.js')
+
+    script(src='/components/underscore/underscore.js')
+    script(src='/components/bootstrap/dist/js/bootstrap.min.js')
+    script(src='/components/URIjs/src/URI.min.js')
+    script(src='/components/angular/angular.min.js')
+    script(src='/components/lightbox2/js/lightbox.min.js')
+    script(src='/components/angular-route/angular-route.min.js')
+    script(src='/components/angular-cookies/angular-cookies.min.js')
+    script(src='/components/restangular/dist/restangular.min.js')
+    script(src='/components/angular-uuid4/angular-uuid4.min.js')
+    script(src='/components/angular-strap/dist/angular-strap.min.js')
+    script(src='/components/angular-strap/dist/angular-strap.tpl.min.js')
+    script(src='/components/dynamic-directive/dist/dynamic-directive.min.js')
+
+    //- <!--build:js({.tmp,frontend}) meetings.js-->
+    script(src='/js/modules/homepageParallax/init.js')
+    script(src='/js/modules/modal/modal.js')
+    script(src='/js/modules/user/user.js')
+    script(src='/js/modules/utils/uri.js')
+    script(src='/js/modules/utils/wizard.js')
+    script(src='/js/modules/utils/language.js')
+    script(src='/js/modules/session/session.js')
+    script(src='/js/modules/configuration/configuration.js')
+    script(src='/js/modules/conference/conference.js')
+    script(src='/js/modules/i18n/i18n.js')
+    script(src='/js/meetings/app.js')
+    script(src='/js/thirdparty/modernizr.js')
+    //- <!--endbuild-->
+    
+
+    //- <!-- Analytics --> 
+    script(src="/analytics/google.js")
+
+    +injectJSFromModules('meetings', injections)
+
+  body.hublin-app.ng-cloak#page-top.index(ng-app='meetingsApplication')
+      include partials/landing-page

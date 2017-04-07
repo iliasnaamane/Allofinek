@@ -1,0 +1,7 @@
+.form-group.configuration-group(ng-hide='canEnumerateDevices')
+  label #{__('Do you have a camera?')}
+  .col-xs-12.configuration-field-group
+    .btn-group.conference-field
+      button.btn(type='button', ng-model='videoEnabled', ng-click='videoEnabled = true', ng-class='{ "btn-configuration-selected": videoEnabled }') #{__('Yes')}
+      button.btn(type='button', ng-model='videoEnabled', ng-click='videoEnabled = false', ng-class='{ "btn-configuration-selected": !videoEnabled }') #{__('No')}
+    #disableVideoWarning

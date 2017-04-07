@@ -1,0 +1,11 @@
+.row.form
+  .col.s12.m6
+    .circleBase.type3
+      img.image-gratuit(src="/images/image-gratuit.png",alt="100% gratuit ")
+      span
+        form.center
+          .input-field.left.col.s12
+            input#firstname.validate( type='text',ng-model='room',placeholder='AlloFinek', maxlength='200' ,automatic-orientation,  required autofocus)
+            label.active(for='firstname')  Saisissez le nom de votre salle
+          input.btn(type='submit', , ng-click='go()',value='Commencer !')
+    

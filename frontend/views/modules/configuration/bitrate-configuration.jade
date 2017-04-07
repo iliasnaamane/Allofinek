@@ -1,0 +1,20 @@
+.row
+  .col.m6.s12.offset-m3
+    .col.m4.s12.offset-s4
+      input#test1(name='group1', type='radio' ,ng-model="value" , value="nolimit" ng-change='selectBitRate(value)')
+      label(for='test1')
+        strong(ng-class='{"teal-text" : isSelected("nolimit") }')
+          i.material-icons(style='font-size:50px;') equalizer
+          |  Haute qualité
+    .col.m4.s12.offset-s4
+      input#test2(name='group1', type='radio',ng-model="value",value="medium",ng-change='selectBitRate(value)', ng-checked='true')
+      label(for='test2')
+        strong(ng-class='{"teal-text" : isSelected("medium") }')
+          i.material-icons(style='font-size:30px;') equalizer
+          |  Moyenne qualité
+    .col.m4.s12.offset-s4
+      input#test3(name='group1', type='radio' ,ng-model="value",value="low" ng-change='selectBitRate(value)')
+      label(for='test3')
+        strong(ng-class='{"teal-text" : isSelected("low") }')  
+          i.material-icons(style='font-size:20px;') equalizer
+          |  Mauvaise qualité
